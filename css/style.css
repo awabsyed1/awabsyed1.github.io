@@ -108,25 +108,18 @@ body {
     /* top:8cm; */
   }
 
-/* .socials {
-    position: relative;
+/* .introduction h2{
     text-align: left;
-    border-style: dotted;
-    display: flex;
-    gap: 10px;
-    display: inline-block;
-    top:8cm;
-    border: 3px solid #333;
-    border-radius: 100%;
-    color: #333;
-    transition: all 0.3s ease;
 } */
-/* #header-main h2 {
-    background: #ffffff;
+
+.introduction{
     color: #000000;
-    padding: 1px;
-    text-align: left;
-} */
+    text-align: justify;
+    /* border-left: 4px solid #333; */
+    margin-left: 30%;
+    margin-right: 30%;
+    margin: 20px 10;
+}
 
 #header-sub{
     background: #3d3d3d;
