@@ -3,14 +3,51 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="js/script.js" type="text/javascript">
+            (function() {
+                emailjs.init("VEMnWlAROqGPZL45l"); // public_id
+            })();
+        </script>
+        
     </head>
     <body>
+        <nav class="main-menu">
+            <a href="javascript:void(0)" onclick="navigateTo('index.html')">Home</a>
+            <a href="javascript:void(0)" onclick="navigateTo('projects.html')">Projects</a>
+            <a href="javascript:void(0)" onclick="navigateTo('cpd.html')">Academic and Career Advancement</a>
+            <a href="javascript:void(0)" onclick="navigateTo('contact.html')">Contact</a>
+        </nav>
+        <header id="header-sub">
+            <h1>Awab Syed</h1>
+            <h4>Mechanical | Controls | Robotics</4>  
+        </header>
+        <div class="contact-container">
+            <h1>Contact Me</h1>
+            <!-- action="mailto:awab.syed@outlook.com" method="post" enctype="text/plain" -->
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
 
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        </div>
         
-        <script src="" async defer></script>
+        <script src="js/script.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="js/script.js" type="text/javascript">
+            (function() {
+                emailjs.init("VEMnWlAROqGPZL45l"); // public_id
+            })();
+        </script>
     </body>
 </html>
