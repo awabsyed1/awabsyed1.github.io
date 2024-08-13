@@ -316,3 +316,11 @@ footer {
         font-size: 1.5em;
     }
 }
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
