@@ -122,7 +122,7 @@ body {
 }
 
 @media (max-width: 600px) {
-    .introduction h1 {
+    .introduction h1, .tab-content .tab-pane.active h2 {
       font-size: 1.5em; /* Smaller font size for mobile */
       margin: 0 10px; /* Reduced margin for smaller screens */
       padding: 8px 16px;
@@ -380,7 +380,7 @@ footer {
     font-size: 1.0em; 
     color: #333;
     text-align: justify;
-    margin: 20px auto; /* Center the element by setting left and right margins to auto */
+    margin: 20px auto; 
     padding: 10px 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -411,7 +411,19 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .tab-content {
+    .image-left, .image-right {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 20%; /* Adjust the width for mobile screens */
+    }
+    .content-container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .tab-content, .tab-content .tab-pane.active p {
         max-width: 90%; 
         margin: 10px auto;       /* Reduce the top and bottom margins */
         padding: 15px;           /* Adjust padding for smaller screens */
@@ -420,7 +432,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .tab-content {
+    .tab-content, .tab-content .tab-pane.active p {
         max-width: 100%;         /* Set max-width to 100% to use the full width of the mobile screen */
         margin: 5px auto;        /* Further reduce the top and bottom margins */
         padding: 10px;           /* Adjust padding for smaller screens */
