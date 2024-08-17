@@ -389,36 +389,36 @@ footer {
     display: block; 
 }
 
-.both-image-content-container {
+/* Styling for the image gallery */
+.image-gallery {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: space-between; /* Space the images evenly */
+    flex-wrap: wrap; /* Ensure the images wrap on smaller screens */
+    margin-top: 20px;
 }
 
-.image-left, .image-right  {
-    width: 45%; /* Each image takes up 45% of the container's width */
+.gallery-image {
+    max-width: 32%; /* Each image takes up about a third of the container */
     height: auto;
     border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the images */
+    margin-bottom: 10px; /* Add some space below each image */
 }
 
-.image-left {
-    margin-right: 10px;
-}
-
-.image-right {
-    margin-left: 10px;
-}
-
+/* Media Queries for Smaller Devices */
 @media (max-width: 768px) {
-    .image-left, .image-right {
-        float: none;
-        display: block;
-        margin: 10px auto;
-        width: 20%; /* Adjust the width for mobile screens */
+    .image-gallery {
+        justify-content: space-around; /* Center images on smaller screens */
     }
-    .content-container {
-        text-align: center;
+
+    .gallery-image {
+        max-width: 48%; /* Allow two images per row on medium-sized screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-image {
+        max-width: 100%; /* Stack images vertically on small screens */
     }
 }
 
