@@ -107,7 +107,7 @@ body {
     /* top:8cm; */
   }
 
-.introduction h1 {
+.introduction h1, .tab-content .tab-pane.active h2 {
     font-size: 2em; /* Base font size for larger screens */
     font-weight: bold;
     color: #333;
@@ -357,15 +357,57 @@ footer {
     display: block;
 }
 
-.tab-content{
+.tab-content .tab-pane.active{
     color: #000000;
     text-align: justify;
     margin: 20px auto;
-    max-width: 700px;
+    max-width: auto;
     border-radius: 5px;
     background-color: #f4f4f4;
     padding: 20px;
-    box-shadow: 04px8pxrgba(0, 0, 0, 0.1);
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    border-radius: none;
+}
+
+.tab-content .tab-pane.active p{
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1.0em; 
+    color: #333;
+    text-align: justify;
+    margin: 20px auto; /* Center the element by setting left and right margins to auto */
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    display: block; 
+}
+
+.both-image-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.image-left, .image-right  {
+    width: 45%; /* Each image takes up 45% of the container's width */
+    height: auto;
+    border-radius: 5px;
+}
+
+.image-left {
+    margin-right: 10px;
+}
+
+.image-right {
+    margin-left: 10px;
 }
 
 @media (max-width: 768px) {
