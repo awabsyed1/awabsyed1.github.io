@@ -440,6 +440,35 @@ footer {
     }
 }
 
+.swarm-video {
+    flex: 1; /* Allow the video aside to take up available space */
+    max-width: 300px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swarm-video h3 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2em;
+    color: #007BFF; 
+}
+
+.swarm-video video {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+}
+
+/* .main-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px; 
+} */
+
 footer {
     background: #333;
     color: #fff;
