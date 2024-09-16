@@ -30,15 +30,15 @@
             <section class="project-tabs">
                 <ul class="tab-list">
                     <li class="tab-item active" data-tab="Project_1">Swarmhacks<br>'22</li>
-                    <li class="tab-item" data-tab="project2">Performance Evaluation of SLAM Approaches</li>
+                    <li class="tab-item" data-tab="project2">SLAM Comparison</li>
                     <li class="tab-item" data-tab="project3">Manipulator</li>
                 </ul>
             </section>
             
             <section class="tab-content">
-
                 <div id="Project_1" class="tab-pane active">
                     <dev class="main-content">
+                        <h2>SwarmHack 2022: Three days Hackathon</h2>
                         <img src="images/swarmhack/Swarmhack22.jpeg" alt="Group Photo" class="responsive-image">
                         <style>.responsive-image {
                             width: 100%;
@@ -46,7 +46,6 @@
                             max-width: none;
                         }
                         </style>
-                        <h2>SwarmHack 2022: Three days Hackathon</h2>
                         <div class="both-image-content-container">
                             <p>
                                 <b>Event Overview:</b> 
@@ -80,16 +79,52 @@
                         </div>
                     </div>
                 </dev>
-    
                 <!-- Project 2 Content -->
-                <div id="project2" class="tab-pane">
-                    <h2>Project 2: Another Great Project</h2>
-                    <p>Description: This is the second project in my portfolio. It involves...</p>
-                    <p>Technologies: Python, Machine Learning</p>
-                    <p>Role: Data Scientist</p>
-                    <!-- <img src="images/swarmhack/Bird_View.jpeg" alt="Project 2 Image"> -->
-                </div>
-    
+                
+                    
+                    <div id="project2" class="tab-pane">
+                        <section class="page-layout">
+                        <h2>Thesis: Performance Evaluation of state-of-the-art approaches for state-estimation and autonomous navigation</h2>
+                        <img src="images/project2.jpg" alt="Group Photo" class="responsive-image">
+                        <p><b>Description:</b> 
+                            Simultaneous Localization and Mapping, SLAM, is a system that enables robots, including UAVs and UGVs to navigate in environments using sensor data and simultaneously builds a map of the surrounding. Although mapping and localization go hand in hand, this report focuses solely on SLAM’s localization/state estimation aspect, much like the chicken and egg problem. This thesis evaluates various localization/state-estimation approaches ranging from VO to state-of-the-art VIO SLAM systems in terms of robustness and computational efficiency. The robustness of approaches was measured by computing Absolute Trajectory Error, ATE, while the computational efficiency was done through measuring the CPU usage, memory footprint and power consumption. The state-estimation approaches considered in this report include VINS-Mono, MIT Kimera, Nvidia Elbrus, OKVIS, along with ORBSLAM3 and a few of its variations, e.g., monocular/stereo.
+                            <br>
+                            Four parameters: speed, perceptual aliasing, lighting condition and dynamic/heterogeneous environment, were considered to evaluate seven state-estimation (SLAM) approaches by constructing eight different scenarios in an indoor Vicon lab with near-replication of the real-world environment.
+                            <br>
+                            Two approaches, DBoW2 and Openfabmap, to train SLAM algorithms were briefly evaluated in terms of loop closure recall rate and training speed. DBoW2 showed optimal performance and was carried forward to train the selected algorithms in each scenario.
+                            <br>
+                            Clearpath Jackal was used to implement the offline testing method, where a large set of image sequences were recorded using various sensors, including Intel RealSense. Highly accurate and time-synchronized ground truth was obtained from the motion capture system, i.e., the VICON system at 100Hz. The recorded data was processed through selected state-estimation algorithms on two hardware platforms, a typical laptop and an IoT device, i.e., Jetson Nano. The estimated trajectory obtained from algorithms was aligned with the ground truth, and ATE error was computed. 
+                            <br>
+                            The result of the statistical analysis showed that stereo-based performed better than the monocular-based implementation of the same approach while slightly consuming more computational resources. Meanwhile, fusing Kalman filtered IMU measurements reduced the drift error of a basic monocular-based approach but also resulted in higher computational properties. ORBSLAM3-Monocular-Inertial was comparatively able to localize better than other monocular-based approaches. Though slightly struggled in perceptual aliasing environment with homogeneous objects but still outperformed the majority of considered approaches.
+                            <br>
+                            On the other hand, stereo-based Nvidia Elbrus performed relatively superior to other approaches in terms of robustness. However, ORBSLAM3-stereo outperformed Elbrus due to its weakness in the dark and texture-less environments/scenarios. OKVIS and VINS-Mono performed equally well compared to other approaches in simpler (easier) scenarios, however, began to struggle as the scenarios and the environment became complex but consumed minimal computation resources.
+                            <br>
+                            Future work is also proposed, which involves a complete software implementation for much quicker testing and more straightforward implementation of various scenarios or environments, particularly in the case of perceptual aliasing. It further recommends outdoor real-time testing to vigorously evaluate each parameter and also add uncertainty to the testing environment that nature comprises.
+                        </p>
+                        <p><b>Technologies | Language | Skills | Hardware: </b> Python, C++ debugging, ROS1 / ROS2, Docker, Hardware & Software Integration, Ground Truth: Vicon Motion Capture System, Data Capture, Data Analysis, Networking / Routing / Latency</p>
+                         <aside class="swarm-video"> 
+                                <h3>Data Capture in Action</h3> 
+                                <video controls>
+                                    <source src="videos/clearpath_datacapture.MOV" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> 
+                        </aside>
+
+                        <aside class="swarm-video"> 
+                            <h3>Simple Perceptual Aliasing </h3> 
+                            <video controls>
+                                <source src="videos/basic_aliasing.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                    </aside>
+                    <div class="image-gallery">
+                        <img src="images/jackal_hardware.jpg" alt="Group Photo" class="gallery-image">
+                        <!-- <img src="images/swarmhack/Bird_View.jpeg" alt="Bird View" class="gallery-image">
+                        <img src="images/swarmhack/swarmhack4.jpeg" alt="MONA | Puck Robot" class="gallery-image"> -->
+                    </div>
+                    </section>   
+                    </div>
+                
                 <!-- Project 3 Content -->
                 <div id="project3" class="tab-pane">
                     <h2>Project 3: Final Project Showcase</h2>

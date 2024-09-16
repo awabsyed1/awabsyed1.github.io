@@ -112,8 +112,8 @@ body {
     font-weight: bold;
     color: #333;
     text-align: center;
-    margin: 0 20px; /* Default margin for larger screens */
-    padding: 10px 20px;
+    margin: 10 20px; /* Default margin for larger screens */
+    padding: 10px 10px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -475,3 +475,5 @@ footer {
     text-align: center;
     padding: 1em 0;
 }
+
+
