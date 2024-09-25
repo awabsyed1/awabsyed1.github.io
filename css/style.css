@@ -474,6 +474,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -485,4 +488,41 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: fit-content; /* Adjust the height to the content */
+}
+
+/* Blog Content */
+.blog-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.blog-post p {
+    font-size: 1em;
+    color: #555;
+}
+
+.read-more {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
 }
