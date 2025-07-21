@@ -526,3 +526,47 @@ footer {
 .read-more:hover {
     text-decoration: underline;
 }
+
+/* --- Project Video Section Enhancements --- */
+.video-section {
+    margin: 30px 0 20px 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 18px 18px 10px 18px;
+}
+
+.video-section h3 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 12px;
+    font-size: 1.15em;
+    font-weight: 600;
+}
+
+.video-grid {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-grid video {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    background: #000;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .video-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .video-grid video {
+        width: 100%;
+        max-width: 480px;
+    }
+}
