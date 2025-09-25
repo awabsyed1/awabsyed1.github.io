@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Network Bridge using nmcli</title>
+        <meta name="description" content="Guide to creating and managing a network bridge using NetworkManager's nmcli command-line tool.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="images/favicon.png"/>
         <link rel="stylesheet" href="../css/style.css">
@@ -20,21 +20,64 @@
 
         <header id="header-sub">
             <h1>Awab Syed</h1>
-            <h4>Mechanical | Controls | Robotics</4>  
+            <h4>Mechanical | Controls | Robotics</h4>  
         </header>
 
-        <main class="blog-content"></main>
-          <h2>Soon to be published ...</h2>
-        
+        <main class="blog-content">
+            <article class="blog-post">
+                <h2>Network Bridge using nmcli</h2>
+                <p><strong>Posted on:</strong> February 20, 2024</p>
 
+                <p>This blog provides a step-by-step guide on creating a network bridge using 
+                <code>nmcli</code>, the command-line interface for NetworkManager. A network bridge allows 
+                multiple interfaces (like Ethernet and virtual machines) to share the same physical network, 
+                often used in virtualization setups.</p>
 
-          
+                <h3>What is a Network Bridge?</h3>
+                <p>A bridge behaves like a virtual network switch. Instead of assigning an IP to each 
+                interface separately, you attach them to the bridge. This is commonly needed when 
+                running virtual machines (e.g., with KVM/QEMU) so they can appear directly on the 
+                network like any other device.</p>
+
+                <h3>Steps to Create a Bridge with nmcli</h3>
+                <ol>
+                    <li><strong>Create the bridge interface</strong>  
+                        <pre><code>nmcli connection add type bridge ifname br0 con-name br0</code></pre>
+                        Here, <code>br0</code> is the name of the new bridge.</li>
+
+                    <li><strong>Assign an IP configuration to the bridge</strong>  
+                        You can set it to DHCP or a static IP. Example with DHCP:  
+                        <pre><code>nmcli connection modify br0 ipv4.method auto</code></pre>
+                        Or for static IP:  
+                        <pre><code>nmcli connection modify br0 ipv4.addresses 192.168.1.100/24
+nmcli connection modify br0 ipv4.gateway 192.168.1.1
+nmcli connection modify br0 ipv4.dns 8.8.8.8
+nmcli connection modify br0 ipv4.method manual</code></pre>
+                    </li>
+
+                    <li><strong>Add a physical interface (e.g., eth0) to the bridge</strong>  
+                        <pre><code>nmcli connection add type ethernet ifname eth0 master br0</code></pre>
+                        This enslaves <code>eth0</code> to the bridge.</li>
+
+                    <li><strong>Bring up the bridge</strong>  
+                        <pre><code>nmcli connection up br0</code></pre>
+                        Verify with:  
+                        <pre><code>ip addr show br0</code></pre></li>
+                </ol>
+
+                <h3>Verification</h3>
+                <p>After setup, the bridge interface (<code>br0</code>) should have the assigned IP, while 
+                the physical interface (e.g., <code>eth0</code>) won’t carry an IP anymore but will 
+                pass traffic through the bridge.</p>
+
+                <h3>Conclusion</h3>
+                <p>Using <code>nmcli</code> to create a network bridge is a reliable way to integrate 
+                physical interfaces and virtual machines into the same network. This is particularly 
+                useful for development, testing environments, or when setting up KVM/QEMU virtualization. 
+                Future posts will cover how to connect virtual machines to this bridge in practice.</p>
+            </article>
         </main>
-        
-        <script src="../js/script.js"></script>
 
-        <!-- <footer>
-            &copy; 2024 Engineering Portfolio. All rights reserved.
-        </footer> -->
+        <script src="../js/script.js"></script>
     </body>
 </html>
