@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Docker Installation and Setup</title>
+        <meta name="description" content="Beginner-friendly guide to installing Docker, understanding images and containers, and containerizing ORB-SLAM3.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="images/favicon.png"/>
         <link rel="stylesheet" href="../css/style.css">
@@ -20,22 +20,71 @@
 
         <header id="header-sub">
             <h1>Awab Syed</h1>
-            <h4>Mechanical | Controls | Robotics</4>  
+            <h4>Mechanical | Controls | Robotics</h4>  
         </header>
 
-        <main class="blog-content"></main>
-          <h2>Soon to be published ...</h2>
-        
+        <main class="blog-content">
+            <article class="blog-post">
+                <h2>Docker Installation and Setup</h2>
+                <p><strong>Posted on:</strong> January 24, 2024</p>
 
+                <p>This blog will go through the complete process of installing and setting up Docker, exploring the basics of Docker images and containers. 
+                It also demonstrates how to create and manage containers with a practical example: containerizing the open-source ORB-SLAM3.</p>
 
-          
+                <h3>What is Docker?</h3>
+                <p>Docker is a platform that allows you to package an application and its dependencies into a <em>container</em>. 
+                This ensures software runs consistently across environments — your laptop, a colleague’s computer, or a remote server.</p>
+
+                <h3>Installing Docker</h3>
+                <p>The installation process varies by operating system:</p>
+                <ul>
+                    <li><strong>Linux (Ubuntu example):</strong>
+                        <pre><code>sudo apt-get update
+sudo apt-get install docker.io</code></pre>
+                    </li>
+                    <li><strong>Windows & macOS:</strong> Download Docker Desktop from the 
+                        <a href="https://www.docker.com/products/docker-desktop/">official website</a>.
+                    </li>
+                </ul>
+                <p>Verify installation with:
+                <pre><code>docker --version</code></pre></p>
+
+                <h3>Images and Containers</h3>
+                <p>A <strong>Docker image</strong> is like a blueprint, and a <strong>container</strong> is the running instance. 
+                For example:
+                <pre><code>docker run -it ubuntu bash</code></pre></p>
+
+                <h3>Your First Container</h3>
+                <p>Here’s a simple <code>Dockerfile</code> for a Python app:</p>
+<pre><code>FROM python:3.9
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+CMD ["python", "main.py"]</code></pre>
+                <p>Build and run it with:
+                <pre><code>docker build -t my-python-app .
+docker run my-python-app</code></pre></p>
+
+                <h3>Example: Containerizing ORB-SLAM3</h3>
+                <p>ORB-SLAM3 is a powerful open-source SLAM system. Instead of manually installing dependencies, Docker makes it portable.</p>
+<pre><code>FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y \ 
+    build-essential cmake git libopencv-dev
+RUN git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git /opt/ORB_SLAM3
+WORKDIR /opt/ORB_SLAM3
+RUN mkdir build && cd build && cmake .. && make -j4
+CMD ["/bin/bash"]</code></pre>
+                <p>Build and run:
+                <pre><code>docker build -t orb-slam3 .
+docker run -it orb-slam3</code></pre></p>
+
+                <h3>Conclusion</h3>
+                <p>Docker simplifies installation, ensures reproducibility, and makes sharing research easier. 
+                By containerizing software like ORB-SLAM3, you can avoid compatibility headaches and focus on development. 
+                This post covered the basics — in future entries, I’ll dive into more advanced Docker concepts and use cases.</p>
+            </article>
         </main>
 
-
         <script src="../js/script.js"></script>
-
-        <!-- <footer>
-            &copy; 2024 Engineering Portfolio. All rights reserved.
-        </footer> -->
     </body>
 </html>
