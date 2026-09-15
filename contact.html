@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Contact | Awab Syed</title>
+        <meta name="description" content="Get in touch with Awab Syed — mechanical, controls, and robotics engineer.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="images/favicon.png"/>
         <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script src="js/script.js" type="text/javascript">
-            (function() {
-                emailjs.init("VEMnWlAROqGPZL45l"); // public_id
-            })();
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Contact | Awab Syed">
+        <meta property="og:description" content="Get in touch with Awab Syed — mechanical, controls, and robotics engineer.">
+        <meta property="og:url" content="https://awabsyed1.github.io/contact.html">
+        <meta property="og:image" content="https://awabsyed1.github.io/images/IMG_1169_J.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"
+                integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS"
+                crossorigin="anonymous"></script>
+        <script>
+            emailjs.init("VEMnWlAROqGPZL45l"); // public_id
         </script>
-        
     </head>
     <body>
         <nav class="main-menu">
-            <a href="javascript:void(0)" onclick="navigateTo('index.html')">Home</a>
-            <a href="javascript:void(0)" onclick="navigateTo('projects.html')">Projects</a>
-            <a href="javascript:void(0)" onclick="navigateTo('cpd.html')">Academic and Career Advancement</a>
-            <a href="javascript:void(0)" onclick="navigateTo('blog.html')">Blog</a>
-            <a href="javascript:void(0)" onclick="navigateTo('contact.html')">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="cpd.html">Academic and Career Advancement</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <header id="header-sub">
             <h1>Awab Syed</h1>
-            <h4>Mechanical | Controls | Robotics</4>  
+            <h4>Mechanical | Controls | Robotics</h4>  
         </header>
         <div class="contact-container">
             <h1>Contact Me</h1>
@@ -40,18 +51,14 @@
             <textarea id="message" name="message" placeholder="Write something.." required></textarea>
 
             <button type="submit">Send Message</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
         </div>
         
         <script src="js/script.js"></script>
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script src="js/script.js" type="text/javascript">
-            (function() {
-                emailjs.init("VEMnWlAROqGPZL45l"); // public_id
-            })();
-        </script>
+        <script src="js/contact.js"></script>
         <footer>
-            &copy; 2024 Engineering Portfolio. All rights reserved.
+            &copy; <span id="copyright-year">2024</span> Engineering Portfolio. All rights reserved.
         </footer>
     </body>
 </html>

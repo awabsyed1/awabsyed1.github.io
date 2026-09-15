@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Blog | Awab Syed</title>
+        <meta name="description" content="Technical blog posts from Awab Syed on Docker, networking, robotics, and lessons from building a tech startup.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="images/favicon.png"/>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Blog | Awab Syed">
+        <meta property="og:description" content="Technical blog posts from Awab Syed on Docker, networking, robotics, and lessons from building a tech startup.">
+        <meta property="og:url" content="https://awabsyed1.github.io/blog.html">
+        <meta property="og:image" content="https://awabsyed1.github.io/images/IMG_1169_J.jpg">
+        <meta name="twitter:card" content="summary_large_image">
     </head>
     <body>
         <nav class="main-menu">
-            <a href="javascript:void(0)" onclick="navigateTo('index.html')">Home</a>
-            <a href="javascript:void(0)" onclick="navigateTo('projects.html')">Projects</a>
-            <a href="javascript:void(0)" onclick="navigateTo('cpd.html')">Academic and Career Advancement</a>
-            <a href="javascript:void(0)" onclick="navigateTo('blog.html')">Blog</a>
-            <a href="javascript:void(0)" onclick="navigateTo('contact.html')">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="cpd.html">Academic and Career Advancement</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <header id="header-sub">
             <h1>Awab Syed</h1>
-            <h4>Mechanical | Controls | Robotics</4>  
+            <h4>Mechanical | Controls | Robotics</h4>  
         </header>
         
         <main class="blog-content">
             <article class="blog-post">
                 <h2>Docker Installation and Setup </h2>
-                <p><strong>Posted on:</strong> Janurary 24, 2024</p>
+                <p><strong>Posted on:</strong> January 24, 2024</p>
                 <p>This is my first blog which will go through the complete process of installing and setting up Docker, exploring the basics of Docker images and containers. 
                     It will go through how to create and manage containers along with providing a practical example by containerizing the open-source ORB-SLAM3 ...
                 </p>
@@ -54,7 +64,7 @@
         <script src="js/script.js"></script>
 
         <footer>
-            &copy; 2024 Engineering Portfolio. All rights reserved.
+            &copy; <span id="copyright-year">2024</span> Engineering Portfolio. All rights reserved.
         </footer>
     </body>
 </html>

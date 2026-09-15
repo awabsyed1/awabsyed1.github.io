@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Projects | Awab Syed</title>
+        <meta name="description" content="Robotics and engineering projects by Awab Syed, including SwarmHack 2022, a SLAM state-estimation comparison, a robotic arm build, and drone building.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="images/favicon.png"/>
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Projects | Awab Syed">
+        <meta property="og:description" content="Robotics and engineering projects by Awab Syed, including SwarmHack 2022, a SLAM state-estimation comparison, a robotic arm build, and drone building.">
+        <meta property="og:url" content="https://awabsyed1.github.io/projects.html">
+        <meta property="og:image" content="https://awabsyed1.github.io/images/IMG_1169_J.jpg">
+        <meta name="twitter:card" content="summary_large_image">
     </head>
     <body>
         <nav class="main-menu">
-            <a href="javascript:void(0)" onclick="navigateTo('index.html')">Home</a>
-            <a href="javascript:void(0)" onclick="navigateTo('projects.html')">Projects</a>
-            <a href="javascript:void(0)" onclick="navigateTo('cpd.html')">Academic and Career Advancement</a>
-            <a href="javascript:void(0)" onclick="navigateTo('blog.html')">Blog</a>
-            <a href="javascript:void(0)" onclick="navigateTo('contact.html')">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="cpd.html">Academic and Career Advancement</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <header id="header-sub">
             <h1>Awab Syed</h1>
-            <h4>Mechanical | Controls | Robotics</4>  
+            <h4>Mechanical | Controls | Robotics</h4>  
         </header>
         <main>
             <section class="project-tabs">
@@ -30,21 +39,15 @@
                     <li class="tab-item" data-tab="project2">SLAM<br> Comparison</li>
                     <li class="tab-item" data-tab="project3">Manipulator<br>Robotic Arm</li>
                     <li class="tab-item" data-tab="project4">Drone<br>Building</li>
-                    <li class="tab-item" data-tab="project4">Ground<br>Jetbot</li>
+                    <li class="tab-item" data-tab="project5">Ground<br>Jetbot</li>
                 </ul>
             </section>
             
             <section class="tab-content">
                 <div id="Project_1" class="tab-pane active">
-                    <dev class="main-content">
+                    <div class="main-content">
                         <h2>SwarmHack 2022: Three days Hackathon</h2>
-                        <img src="images/swarmhack/Swarmhack22.jpeg" alt="Group Photo" class="responsive-image">
-                        <style>.responsive-image {
-                            width: 100%;
-                            height: auto;
-                            max-width: none;
-                        }
-                        </style>
+                        <img src="images/swarmhack/Swarmhack22.jpeg" alt="SwarmHack 2022 team group photo" class="responsive-image">
                         <div class="both-image-content-container">
                             <p>
                                 <b>Event Overview:</b> 
@@ -64,33 +67,38 @@
                                 Python, Robot Opterating System (ROS), Networking Protcols, Pi-puck & MONA robots.   
                             </p>
                             <div class="image-gallery">
-                                <img src="images/swarmhack/comp_platform.jpeg" alt="Group Photo" class="gallery-image">
-                                <img src="images/swarmhack/Bird_View.jpeg" alt="Bird View" class="gallery-image">
-                                <img src="images/swarmhack/swarmhack4.jpeg" alt="MONA | Puck Robot" class="gallery-image">
+                                <img src="images/swarmhack/comp_platform.jpeg" alt="Competition platform setup" class="gallery-image" loading="lazy">
+                                <img src="images/swarmhack/Bird_View.jpeg" alt="Bird's-eye view of the robot arena" class="gallery-image" loading="lazy">
+                                <img src="images/swarmhack/swarmhack4.jpeg" alt="MONA | Puck Robot" class="gallery-image" loading="lazy">
+                                <img src="images/swarmhack/IMG_0376.JPG" alt="SwarmHack 2022 team at work" class="gallery-image" loading="lazy">
+                                <img src="images/swarmhack/IMG_6524.JPG" alt="SwarmHack 2022 robots on the test platform" class="gallery-image" loading="lazy">
+                                <img src="images/swarmhack/Pic2.jpeg" alt="SwarmHack 2022 hackathon venue" class="gallery-image" loading="lazy">
                             </div>
-                            <!-- <aside class="swarm-video"> -->
-                                <!-- <h3>Hackathon in Action</h3> -->
-                                <!-- <video controls>
-                                    <source src="videos/swarm_video.MP4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video> -->
-                            <!-- </aside> -->
+                            <div class="video-section">
+                                <h3>Hackathon in Action</h3>
+                                <div class="video-grid">
+                                    <video controls preload="none">
+                                        <source src="videos/swarm_video.MP4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </dev>
+                </div>
                 <!-- Project 2 Content -->
                 <div id="project2" class="tab-pane">
                     <section class="page-layout">
                         <h2>Thesis: Performance Evaluation of state-of-the-art approaches for state-estimation and autonomous navigation</h2>
-                        <img src="images/jackal_hardware.jpg" alt="Clearpath Hardware" class="responsive-image">
+                        <img src="images/jackal_hardware.jpg" alt="Clearpath Jackal hardware platform" class="responsive-image" loading="lazy">
                         <div class="video-section">
                             <h3>Data Capture in Action</h3>
                             <div class="video-grid">
-                                <video controls>
+                                <video controls preload="none">
                                     <source src="videos/clearpath_datacapture.MOV" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <video controls>
+                                <video controls preload="none">
                                     <source src="videos/basic_aliasing.MOV" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -99,17 +107,26 @@
                         <div class="video-section">
                             <h3>Aliasing & Loop Closure in Action</h3>
                             <div class="video-grid">
-                                <video controls>
+                                <video controls preload="none">
                                     <source src="videos/aliasing.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <video controls>
+                                <video controls preload="none">
                                     <source src="videos/loop_closure.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                         </div>
-                        <p><b>Description:</b> 
+                        <div class="video-section">
+                            <h3>Basic Navigation</h3>
+                            <div class="video-grid">
+                                <video controls preload="none">
+                                    <source src="videos/basic_navigation.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <p><b>Description:</b>
                             Simultaneous Localization and Mapping, SLAM, is a system that enables robots, including UAVs and UGVs to navigate in environments using sensor data and simultaneously builds a map of the surrounding. Although mapping and localization go hand in hand, this report focuses solely on SLAM’s localization/state estimation aspect, much like the chicken and egg problem. This thesis evaluates various localization/state-estimation approaches ranging from VO to state-of-the-art VIO SLAM systems in terms of robustness and computational efficiency. The robustness of approaches was measured by computing Absolute Trajectory Error, ATE, while the computational efficiency was done through measuring the CPU usage, memory footprint and power consumption. The state-estimation approaches considered in this report include VINS-Mono, MIT Kimera, Nvidia Elbrus, OKVIS, along with ORBSLAM3 and a few of its variations, e.g., monocular/stereo.
                             <br>
                             Four parameters: speed, perceptual aliasing, lighting condition and dynamic/heterogeneous environment, were considered to evaluate seven state-estimation (SLAM) approaches by constructing eight different scenarios in an indoor Vicon lab with near-replication of the real-world environment.
@@ -126,8 +143,8 @@
                         </p>
                         <p><b>Technologies | Language | Skills | Hardware: </b> Python, C++ debugging, ROS1 / ROS2, Docker, Hardware & Software Integration, Ground Truth: Vicon Motion Capture System, Data Capture, Data Analysis, Networking / Routing / Latency</p>
                         <div class="image-gallery">
-                            <img src="images/project2.jpg" alt="project2" class="gallery-image">
-                            <img src="images/jackal.jpg" alt="jackal" class="gallery-image">
+                            <img src="images/project2.jpg" alt="SLAM state-estimation test setup" class="gallery-image" loading="lazy">
+                            <img src="images/jackal.jpg" alt="Clearpath Jackal robot in the test environment" class="gallery-image" loading="lazy">
                         </div>
                     </section>   
                 </div>
@@ -135,19 +152,32 @@
                 <!-- Project 3 Content -->
                 <div id="project3" class="tab-pane">
                     <h2>Project 3: Robotics Arm </h2>
-                    <p>Description: </p>
-                    <p>Technologies: </p>
-                    <video controls>
-                        <source src="videos/pick&place.mp4" type="video/mp4">
+                    <video controls preload="none">
+                        <source src="videos/pick-place.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video> 
+                    </video>
+                    <p><b>Description:</b>
+                        A personal project building a pick-and-place pipeline for an ABB industrial 6-axis arm. The robot picks up 3D-printed parts and places each one into a matching cutout on a shaped fixture, demonstrating repeatable positioning and object-specific placement. Motion planning and trajectory execution were handled through ROS/ROS2 and MoveIt, with ABB RobotStudio and RAPID used for the robot's native control and calibration.
+                    </p>
+                    <p><b>Technologies | Language | Skills | Hardware: </b> ROS / ROS2, MoveIt, ABB RobotStudio, RAPID, ABB industrial robotic arm, pneumatic gripper, 3D-printed fixtures</p>
                 </div>
 
                 <!-- Project 4 Content -->
                 <div id="project4" class="tab-pane">
                     <h2>Project 4: Building Drone </h2>
-                    <p>Description: </p>
-                    
+                    <p><b>Description:</b>
+                        A custom-built drone project focused on autonomous flight and navigation. The frame, motors, and electronics were assembled from individual components, with flight control handled through PX4 and ArduPilot firmware and ROS/ROS2 used for higher-level autonomy and navigation logic.
+                    </p>
+                    <p><b>Technologies | Language | Skills | Hardware: </b> PX4, ArduPilot, ROS / ROS2, Custom drone frame build, Flight controller integration, Autonomous navigation</p>
+                </div>
+
+                <!-- Project 5 Content -->
+                <div id="project5" class="tab-pane">
+                    <h2>Project 5: Ground Jetbot </h2>
+                    <p><b>Description:</b>
+                        A ground robotics project built on the NVIDIA JetBot platform, covering autonomous navigation, camera-based object detection, and remote teleoperation. The perception and control stack combined ROS/ROS2 with NVIDIA JetPack and Isaac tooling, while Python, OpenCV, and PyTorch handled onboard object detection and higher-level decision-making.
+                    </p>
+                    <p><b>Technologies | Language | Skills | Hardware: </b> NVIDIA JetBot, ROS / ROS2, NVIDIA JetPack, NVIDIA Isaac, Python, OpenCV, PyTorch, Autonomous navigation, Object detection, Teleoperation</p>
                 </div>
             </section>
         </main>
@@ -155,7 +185,7 @@
 
         <script src="js/script.js"></script>
         <footer>
-            &copy; 2024 Engineering Portfolio. All rights reserved.
+            &copy; <span id="copyright-year">2024</span> Engineering Portfolio. All rights reserved.
         </footer>
     </body>
 </html>

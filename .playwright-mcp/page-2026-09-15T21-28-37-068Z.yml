@@ -1,0 +1,44 @@
+- generic [active] [ref=f1e1]:
+  - navigation [ref=f1e2]:
+    - link "Home" [ref=f1e3] [cursor=pointer]:
+      - /url: index.html
+    - link "Projects" [ref=f1e4] [cursor=pointer]:
+      - /url: projects.html
+    - link "Academic and Career Advancement" [ref=f1e5] [cursor=pointer]:
+      - /url: cpd.html
+    - link "Blog" [ref=f1e6] [cursor=pointer]:
+      - /url: blog.html
+    - link "Contact" [ref=f1e7] [cursor=pointer]:
+      - /url: contact.html
+  - banner [ref=f1e8]:
+    - heading "Awab Syed" [level=1] [ref=f1e9]
+    - heading "Mechanical | Controls | Robotics" [level=4] [ref=f1e10]
+  - main [ref=f1e11]:
+    - list [ref=f1e13]:
+      - listitem [ref=f1e14] [cursor=pointer]: Swarmhacks'22
+      - listitem [ref=f1e15] [cursor=pointer]: SLAM Comparison
+      - listitem [ref=f1e16] [cursor=pointer]: ManipulatorRobotic Arm
+      - listitem [ref=f1e17] [cursor=pointer]: DroneBuilding
+      - listitem [ref=f1e18] [cursor=pointer]: GroundJetbot
+    - generic [ref=f1e41]:
+      - 'heading "Thesis: Performance Evaluation of state-of-the-art approaches for state-estimation and autonomous navigation" [level=2] [ref=f1e42]'
+      - img "Clearpath Jackal hardware platform" [ref=f1e43]
+      - generic [ref=f1e44]:
+        - heading "Data Capture in Action" [level=3] [ref=f1e45]
+        - generic [ref=f1e46]:
+          - generic [ref=f1e47]: Your browser does not support the video tag.
+          - generic [ref=f1e48]: Your browser does not support the video tag.
+      - generic [ref=f1e49]:
+        - heading "Aliasing & Loop Closure in Action" [level=3] [ref=f1e50]
+        - generic [ref=f1e51]:
+          - generic [ref=f1e52]: Your browser does not support the video tag.
+          - generic [ref=f1e53]: Your browser does not support the video tag.
+      - generic [ref=f1e54]:
+        - heading "Basic Navigation" [level=3] [ref=f1e55]
+        - generic [ref=f1e56]: Your browser does not support the video tag.
+      - paragraph [ref=f1e58]: "Description: Simultaneous Localization and Mapping, SLAM, is a system that enables robots, including UAVs and UGVs to navigate in environments using sensor data and simultaneously builds a map of the surrounding. Although mapping and localization go hand in hand, this report focuses solely on SLAM’s localization/state estimation aspect, much like the chicken and egg problem. This thesis evaluates various localization/state-estimation approaches ranging from VO to state-of-the-art VIO SLAM systems in terms of robustness and computational efficiency. The robustness of approaches was measured by computing Absolute Trajectory Error, ATE, while the computational efficiency was done through measuring the CPU usage, memory footprint and power consumption. The state-estimation approaches considered in this report include VINS-Mono, MIT Kimera, Nvidia Elbrus, OKVIS, along with ORBSLAM3 and a few of its variations, e.g., monocular/stereo. Four parameters: speed, perceptual aliasing, lighting condition and dynamic/heterogeneous environment, were considered to evaluate seven state-estimation (SLAM) approaches by constructing eight different scenarios in an indoor Vicon lab with near-replication of the real-world environment. Two approaches, DBoW2 and Openfabmap, to train SLAM algorithms were briefly evaluated in terms of loop closure recall rate and training speed. DBoW2 showed optimal performance and was carried forward to train the selected algorithms in each scenario. Clearpath Jackal was used to implement the offline testing method, where a large set of image sequences were recorded using various sensors, including Intel RealSense. Highly accurate and time-synchronized ground truth was obtained from the motion capture system, i.e., the VICON system at 100Hz. The recorded data was processed through selected state-estimation algorithms on two hardware platforms, a typical laptop and an IoT device, i.e., Jetson Nano. The estimated trajectory obtained from algorithms was aligned with the ground truth, and ATE error was computed. The result of the statistical analysis showed that stereo-based performed better than the monocular-based implementation of the same approach while slightly consuming more computational resources. Meanwhile, fusing Kalman filtered IMU measurements reduced the drift error of a basic monocular-based approach but also resulted in higher computational properties. ORBSLAM3-Monocular-Inertial was comparatively able to localize better than other monocular-based approaches. Though slightly struggled in perceptual aliasing environment with homogeneous objects but still outperformed the majority of considered approaches. On the other hand, stereo-based Nvidia Elbrus performed relatively superior to other approaches in terms of robustness. However, ORBSLAM3-stereo outperformed Elbrus due to its weakness in the dark and texture-less environments/scenarios. OKVIS and VINS-Mono performed equally well compared to other approaches in simpler (easier) scenarios, however, began to struggle as the scenarios and the environment became complex but consumed minimal computation resources. Future work is also proposed, which involves a complete software implementation for much quicker testing and more straightforward implementation of various scenarios or environments, particularly in the case of perceptual aliasing. It further recommends outdoor real-time testing to vigorously evaluate each parameter and also add uncertainty to the testing environment that nature comprises."
+      - paragraph [ref=f1e59]: "Technologies | Language | Skills | Hardware: Python, C++ debugging, ROS1 / ROS2, Docker, Hardware & Software Integration, Ground Truth: Vicon Motion Capture System, Data Capture, Data Analysis, Networking / Routing / Latency"
+      - generic:
+        - img "SLAM state-estimation test setup"
+        - img "Clearpath Jackal robot in the test environment"
+  - contentinfo [ref=f1e39]: © 2026 Engineering Portfolio. All rights reserved.

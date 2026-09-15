@@ -1,0 +1,41 @@
+- generic [active] [ref=f2e1]:
+  - navigation [ref=f2e2]:
+    - link "Home" [ref=f2e3] [cursor=pointer]:
+      - /url: index.html
+    - link "Projects" [ref=f2e4] [cursor=pointer]:
+      - /url: projects.html
+    - link "Academic and Career Advancement" [ref=f2e5] [cursor=pointer]:
+      - /url: cpd.html
+    - link "Blog" [ref=f2e6] [cursor=pointer]:
+      - /url: blog.html
+    - link "Contact" [ref=f2e7] [cursor=pointer]:
+      - /url: contact.html
+  - banner [ref=f2e8]:
+    - heading "Awab Syed" [level=1] [ref=f2e9]
+    - heading "Mechanical | Controls | Robotics" [level=4] [ref=f2e10]
+  - main [ref=f2e11]:
+    - article [ref=f2e12]:
+      - heading "Docker Installation and Setup" [level=2] [ref=f2e13]
+      - paragraph [ref=f2e14]:
+        - strong [ref=f2e15]: "Posted on:"
+        - text: January 24, 2024
+      - paragraph [ref=f2e16]: This is my first blog which will go through the complete process of installing and setting up Docker, exploring the basics of Docker images and containers. It will go through how to create and manage containers along with providing a practical example by containerizing the open-source ORB-SLAM3 ...
+      - link "Read more" [ref=f2e17] [cursor=pointer]:
+        - /url: blog/docker.html
+    - article [ref=f2e18]:
+      - heading "Network Bridge using nmcli" [level=2] [ref=f2e19]
+      - paragraph [ref=f2e20]:
+        - strong [ref=f2e21]: "Posted on:"
+        - text: February 20, 2024
+      - paragraph [ref=f2e22]: This is another blog post, providing a guide to ad a network bridge with NetworkManager using nmcli ...
+      - link "Read more" [ref=f2e23] [cursor=pointer]:
+        - /url: blog/nmcli.html
+    - article [ref=f2e24]:
+      - 'heading "My First Venture: Lessons from Starting a Tech Startup" [level=2] [ref=f2e25]'
+      - paragraph [ref=f2e26]:
+        - strong [ref=f2e27]: "Posted on:"
+        - text: March 15, 2024
+      - paragraph [ref=f2e28]: This is a blog post about my first venture, Lessons from Starting a Tech Startup ...
+      - link "Read more" [ref=f2e29] [cursor=pointer]:
+        - /url: blog/my_first_venture.html
+  - contentinfo [ref=f2e30]: © 2026 Engineering Portfolio. All rights reserved.
